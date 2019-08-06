@@ -14,18 +14,17 @@ logo.addEventListener('mouseout', (e) => {
 // dblclick
 const pics = document.querySelectorAll('img');
 
-console.log(pics);
-    for(i = 0; i < pics.length; i ++){
-        pics[i].addEventListener('dblclick', (e) => {
-            e.target.style.filter = "grayscale(100%)";
+for(i = 0; i < pics.length; i ++){
+    pics[i].addEventListener('dblclick', (e) => {
+        e.target.style.filter = "grayscale(100%)";
+    })//e function
+}//for loop
 
-    })
+// wheel
+const page = document.querySelector('.main-navigation');
+console.log(page);
+page.addEventListener('wheel', (e) => {
+    page.style.backgroundColor = "yellow";
+})
 
-}
-
-
-
-    
-
-
-
+//
