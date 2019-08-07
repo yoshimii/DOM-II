@@ -56,11 +56,56 @@ window.addEventListener('scroll', (e)=>{
 let hyper = document.querySelector("html");
 window.addEventListener('load', (e)=> {
     setTimeout(function(){
-        hyper.style.background = "url(https://img.buzzfeed.com/buzzfeed-static/static/2017-08/17/12/enhanced/buzzfeed-prod-fastlane-01/original-14351-1502988161-12.png)";
+        hyper.style.background = "url(https://images.unsplash.com/photo-1517384084767-6bc118943770?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)";
+        hyper.style.background.position = "cover";
     }, 3000);
    
     e.stopPropagation();
 })
+
+
+// contextmenu
+let headers = document.querySelectorAll("h4");
+for(i = 0; i < headers.length; i++){
+    headers[i].addEventListener('contextmenu', (e)=>{
+        e.preventDefault();
+        })
+}
+// preventDefault
+let navLinks = document.querySelectorAll(".nav-link");
+console.log(navLinks);
+for(i = 0; i < navLinks.length; i ++){
+    navLinks[i].addEventListener('click', (e)=>{
+        e.preventDefault();
+    })
+}
+
+
+//stopPropagation()
+let child = document.querySelectorAll("p");
+let parent = document.querySelectorAll("div");
+
+for(i = 0; i < parent.length; i ++){
+    for(j = 0; j <child.length; j ++){
+        child[j].addEventListener('dblclick', (e)=>{
+            e.target.style.color = "yellow";
+            e.stopPropagation();
+        })
+
+        parent[i].addEventListener('dblclick', (e)=> {
+            e.target.style.color = "red";
+        })
+    }
+}
+
+let buttons = document.querySelectorAll(".btn");
+for(i = 0; i < buttons.length; i ++){
+
+}
+
+
+
+
 
 // // create new element
 // let boxx = document.createElement("div");
