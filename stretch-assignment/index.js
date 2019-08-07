@@ -13,7 +13,12 @@ for(i = 0; i < launchPad.length; i++){// Adds EventListeners to each child
     }
 
     for(i = 0; i < launchPad.length; i++){// Adds EventListeners to each child
-            
+            // for(j = 0; j < launchPad.length; j ++){
+            //     launchPad[i].addEventListener('mouseup', (e)=>{
+            //             e.target.style.position = "absolute";
+            //             e.target.style.left = "500px";
+            //     })
+            // }
         launchPad[i].addEventListener('mousedown', (e)=>{// On click removes target and prepends to parent
             let child = e.target;  
             let pos = 0;            
@@ -24,8 +29,7 @@ for(i = 0; i < launchPad.length; i++){// Adds EventListeners to each child
             if (pos == 1500) {
               clearInterval(id);
             } else {
-              pos++; 
-              
+              pos++;              
               child.style.left = pos + "px"; 
             }
     }, 5);
