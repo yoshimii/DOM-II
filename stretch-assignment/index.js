@@ -1,13 +1,15 @@
+let nasa = document.querySelector(".blocks");
 let allBlocks = document.querySelectorAll(".block");
 console.log(allBlocks);
 let launchPad = Array.from(allBlocks);
 console.log(launchPad);
 for(i = 0; i < launchPad.length; i++){
-    let child = launchPad[i];
+    
     launchPad[i].addEventListener('click', (e)=>{
-        document.querySelector(".blocks").removeChild(e.target);
-        // launchPad.prepend(moveToTop);
-        console.log(child);
+        let child = e.target;
+        nasa.removeChild(child);
+        nasa.prepend(child);
+        
     });
 }
 
