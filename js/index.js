@@ -100,7 +100,9 @@ for(i = 0; i < parent.length; i ++){
 
 let buttons = document.querySelectorAll(".btn");
 for(i = 0; i < buttons.length; i ++){
-
+    buttons[i].addEventListener('mouseleave', (e)=> {
+         alert("Don't delay, act today!");
+    })
 }
 
 
